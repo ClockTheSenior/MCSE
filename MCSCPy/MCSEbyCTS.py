@@ -1,7 +1,11 @@
 from asyncio.base_futures import _FINISHED
-import json, os, platform, shutil, time
+import json, os, platform, shutil, time, sys
 from distutils.core import setup
-
+import codecs
+if sys.stdout.encoding != 'UTF-8':
+    sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
+if sys.stderr.encoding != 'UTF-8':
+    sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
 
 LINE_UP = '\033[1A'
 LINE_CLEAR = '\x1b[2K'
@@ -20,11 +24,17 @@ if platform.system() == "Windows":
      MC_ASSETS = os.path.expandvars(r"%APPDATA%/.minecraft/assets")
 else:
      MC_ASSETS = os.path.expanduser(r"~/.minecraft/assets")
- 
+
+print("\033[1;34;40mEnter the the version to get the sounds from (has to be installed)")
+MC_INPUTVERSION = input("\033[1;37;40m")
+print(LINE_UP, end=LINE_CLEAR)
+print(LINE_UP, end=LINE_CLEAR)
  # Find the latest installed version of minecraft (choose the last element in assets/indexes)
-MC_VERSION = os.listdir(MC_ASSETS+"/indexes/")[1]
-print("Your latest installed version of Minecraft is " + MC_VERSION[:-5] + "\n")
- 
+if platform.system() == "Windows":
+     MC_VERSION = os.path.expandvars("%APPDATA%/.minecraft/assets/indexers/"+MC_INPUTVERSION+".json")
+else:
+     MC_VERSION = os.path.expanduser("~/.minecraft/assets/indexers/"+MC_INPUTVERSION+".json")
+
  # Change this if you want to put the sound files somewhere else
 print("\033[1;34;40mEnter the path that you want to extract the sounds to:")
 OUTPUT_PATH = os.path.normpath(os.path.expandvars(os.path.expanduser(input("\033[1;37;40m"))))
@@ -56,7 +66,7 @@ while SuperMode not in ("Enabled", "Disabled"):
 
 
  # These are unlikely to change
-MC_OBJECT_INDEX = f"{MC_ASSETS}/indexes/{MC_VERSION}"
+MC_OBJECT_INDEX = f"{MC_ASSETS}/indexes/{MC_INPUTVERSION}.json"
 MC_OBJECTS_PATH = f"{MC_ASSETS}/objects"
 MC_SOUNDS = r"minecraft/sounds/"
 
@@ -99,7 +109,7 @@ with open(MC_OBJECT_INDEX, "r") as read_file:
          shutil.copyfile(src_fpath, dest_fpath)
          
 print("\033[1;32;40mDone!")
-time.set(5)
+time.sleep(5)
 print("\033[1;31;40mClosing!")
 time.sleep(3)
 print(LINE_UP, end=LINE_CLEAR)
