@@ -3,7 +3,8 @@
 This python program allows you to extract the Minecraft Sound Files to any given location!
 
 
-<img src="https://github.com/ClockTheSenior/MCSE/raw/main/iconblue.png" width="250" height="250">         <img src="https://logolook.net/wp-content/uploads/2021/06/Minecraft-Logo.png" width="50%" height="50%">
+<img src="https://github.com/ClockTheSenior/MCSE/raw/main/iconblue.png" width="250" height="250">
+<img src="https://logolook.net/wp-content/uploads/2021/06/Minecraft-Logo.png" width="50%" height="50%">
 
 
 ## Installation
