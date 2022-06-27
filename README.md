@@ -1,7 +1,6 @@
 # MCSE - The way to the MC sound effects. 
 
 This python program allows you to extract the Minecraft Sound Files to any given location!
- ![alt text](https://github.com/ClockTheSenior/MCSE/raw/main/iconblue.png =250x250)
  ![iconblue.png]<img src="https://github.com/ClockTheSenior/MCSE/raw/main/iconblue.png" width="250" height="250">
 
 ## Installation
