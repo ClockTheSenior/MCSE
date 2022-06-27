@@ -1,12 +1,40 @@
-# MCSE
+# MCSE - The way to the MC sound effects. 
+
 This python program allows you to extract the Minecraft Sound Files to any given location!
+ ![alt text](https://github.com/ClockTheSenior/MCSE/raw/main/iconblue.png)
 
-### How does it work?
-It goes into the ~/.Minecraft/assets/indexers folder if you are on Mac/Linux and goes into the %AppData%/.minecraft/assets/indexers folder and gets the version by the .JSON file.
+## Installation
 
-### Usage
-To use this wonderfully written program you need to download and run the .exe (may be flagged by antivirus).
-Now you just go through the Extraction-Process!
+Go to the [releases](https://github.com/ClockTheSenior/MCSE/releases) and choose the latest release to download.
 
-### Compile yourself
-To compile this yourself, you need to download the source-code and a IDE 
+## Usage
+If you want to extract the sound effects of Minecraft, you need to run the executable and  go through the process. You will be asked to enter a version! That is the version you wannt to extract the Sounds from! Keep in mind that, that version has to be installed and in the DEFAULT Minecraft Directory!
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+License
+
+Copyright (c) 2022 ClockTheSenior
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
