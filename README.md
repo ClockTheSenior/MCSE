@@ -1,4 +1,4 @@
-# MCSE - The way to the MC sound effects. 
+# MCSE - The way to the MC sounds. 
 
 This python program allows you to extract the Minecraft Sound Files to any given location!
 
